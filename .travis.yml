@@ -1,6 +1,8 @@
 language: python
 sudo: false
-arch: ppc64le
+arch: 
+  - ppc64le
+  - amd64
 matrix:
   include:
     - python: 3.5
@@ -8,6 +10,8 @@ matrix:
     - python: 3.7
       dist: xenial
       sudo: true
+  exclude:
+  arch: ppc64le
     - python: pypy3
 branches:
   only:
